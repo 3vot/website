@@ -8,7 +8,7 @@ require('rspine/lib/salesforceAjax')
 
 var request = $.ajax( {
   type: 'GET',
-  url:"http://quiet-atoll-3343.herokuapp.com/salesforce/login?app_url=http://r2.3vot.com&state=ok" 
+  url:"http://quiet-atoll-3343.herokuapp.com/salesforce/login?app_url=http://localhost:7770&state=ok" 
 }).success(function(data){
   window.location.href = data;
 });
