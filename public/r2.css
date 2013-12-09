@@ -4065,12 +4065,14 @@ body {
 .page .inspiration p {
   margin-top: 15px;
 }
+.page .inspiration p .strike {
+  text-decoration: line-through;
+}
 .page .inspiration img {
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin: auto;
-  top: 80px;
   position: relative;
 }
 .page footer {
