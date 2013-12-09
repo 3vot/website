@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link href="http://fonts.googleapis.com/css?family=Roboto:100|Open+Sans:400,300&amp;subset=latin" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="/r2.css"><script src="/r2.js"></script><script type="text/javascript" charset="utf-8">var jQuery  = require("jqueryify");
+
+var apiServer= "http://quiet-atoll-3343.herokuapp.com";
+
+var layout = "web";
+
+var exports = this;
+</script><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+mixpanel.init("c67565510eca92737fd12a39bba42dd7");
+
+
+mixpanel.track_links(".navigation .featuresLink", "Browsed Features", { referrer: document.referrer });
+mixpanel.track_links(".navigation .pricing", "Browsed Pricing", { referrer: document.referrer });
+mixpanel.track_links(".navigation .home", "Browsed Home", { referrer: document.referrer });
+mixpanel.track_links(".navigation .gettingStarted", "Browsed Getting Started", { referrer: document.referrer });
+mixpanel.track_links(".navigation .talkToUs", "Browsed Talk To Us", { referrer: document.referrer });
+
+
+mixpanel.track_links(".btn-talk", "Wants to Talk", { referrer: document.referrer });
+
+mixpanel.track_links(".btn-call-to-buy", "Wants to Buy", { referrer: document.referrer });
+
+mixpanel.track_links(".btn-watch-video-1", "Watch Getting Started Video", { referrer: document.referrer });
+mixpanel.track_links(".btn-watch-video-2", "Watch Install Video", { referrer: document.referrer });
+mixpanel.track_links(".btn-watch-video-3", "Watch Manage Video", { referrer: document.referrer });
+mixpanel.track_links(".btn-watch-video-4", "Watch Build Video", { referrer: document.referrer });
+mixpanel.track_links(".btn-watch-video-5", "Watch Consuming Video", { referrer: document.referrer });
+
+mixpanel.track_forms(".form-talk-by-phone", "Sent Phone Number");
+mixpanel.track_forms(".form-connect", "Early Adopter Connected");
+
+
+mixpanel.track_links(".btn-register-early-adopter", "Early Adopter Connecting");
+  mixpanel.track_links(".btn-installing-r2", "Early Adopter Installed R2");
+  
+  
+  
+  
+  </script><script>mixpanel.track("Visted Home Page");
+</script></head><body class="page connect"><header><img src="/images/3vot-logo.png"></header><section class="container navigation"><div class="row"><img src="./images/r2-logo.png" class="hidden-md hidden-lg center-block"><a href="/features.html" class="col-md-2 col-md-offset-1 featuresLink">Features</a><a href="/pricing.html" class="col-md-2 pricing">Pricing</a><a href="/home.html" class="col-md-2 logo visible-lg visible-md home"><img src="./images/r2-logo.png"></a><a href="/gettingStarted.html" class="col-md-2 gettingStarted">Getting Started</a><a href="/talkToUs.html" class="col-md-2 twoLines talkToUs">Talk with a Founder</a></div></section><section class="container headline"><h1 class="color-gray">R2 <span class="color-purple">INSTALLATION</span> <span class="color-blue">INSTRUCTIONS</span></h1><br><div class="row"><div class="col-md-4 col-md-offset-2"><a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04ti0000000KZB0" class="btn btn-primary btn-lg btn-block btn-installing-r2">Install in Dev Org</a></div><div class="col-md-4"><a href="https://test.salesforce.com/packaging/installPackage.apexp?p0=04ti0000000KZB0" class="btn btn-primary btn-lg btn-block btn-installing-r2">Install in Sandbox</a></div></div></section><br><section class="container"><div class="row"><div style="padding: 15px 30px;" class="col-md-5 col-md-offset-1 panel"><h2 style="font-size: 20px;">Installing the App Store</h2><p>When you click on Install R2 you'll be taken to Salesforce.com Sandbox Login, you'll need to login with you Sandbox Credentials</p><p>Salesforce Connected Apps we'll show you several screens asking for permission to enable R2 for your SANDBOX users.</p><p>After that your users will be able to login with salesforce into your own App Store</p><p>The first time each users log's in the Connected App Permission Box will appear in order to Allow Access.</p></div><div style="padding: 15px 30px;" class="col-md-5 col-md-offset-1 panel"><h2 style="font-size: 20px;">Creating the App Store</h2><p>In order to setup your Dev Environment you need NODEJS and GIT</p><p><a target="_blank" href="http://github.com/3vot/r2">Clone the App Store from github</a></p><p>Install all dependencies with $ npm install .</p><p>Edit ./config/organization.json and add your Salesforce.com ORG_ID </p><p>On the R2's root path in terminal run $ grunt server</p><p>R2's is running on the Web Browser at <a href="http://localhost:7770/">localhost:7770</a></p></div></div><div class="row"><div class="panel col-md-8 col-md-offset-2"><p>If you can complete this steps then let's schedule a Free Skype Session.<a href="/talkToUs.html"> Contact our founders</a> for Free Training Session.</p><p>On the other hand, if there's a problem just get in <a href="/talkToUs.html">touch</a> and we'll explain your options on how to go on.</p></div></div></section><section class="inspiration"><div class="container"><h1 class="color-purple">IN FREEDOM, WE BELIEVE </h1><h2 class="color-gray">The best companies in the world build their own software,we <span class="color-purple">help you build</span> your own.</h2><div class="row"><div class="col-md-4 float-column"><img src="/images/3vot-logo-full.png"></div><div class="col-md-4 col-md-offset-2"><p>Amazing Companies have one thing in common: they build their own technology. </p><p>We'll get you building your own technology.</p><p>Technology to make business better; constantly improving processes, products and customer relationships.</p><p>Creating the conditions for innovation to occur</p></div></div></div></section><footer><div class="icon"><img src="/images/talk-to-us-icon.png"></div><div class="container"><h2> <a href="talkToUs.html">Contact our co-founders directly @ anytime: US  1-800-363-8078</a></h2><section class="contact"><div class="row"><div class="col-md-4"><a href="talkToUs.html" class="btn-talk"><img src="/images/hangouts-footer.png"><p>Join Out Weekly Hangout</p></a></div><div class="col-md-4"><a href="talkToUs.html" class="btn-talk"><img src="/images/paid-consulting-support.png"><p>Paid Consulting Support</p></a></div><div class="col-md-4"><a href="talkToUs.html" class="btn-talk"><img src="/images/paid-development-sessions.png"><p>Paid Development Sessions</p></a></div></div><div class="row"><div class="col-md-12"><p class="legal"><span>Let us know if you have</span><a href="talkToUs.html" class="btn-talk">any questions        </a><span>or special requirements, we are an Open Data Company </span></p></div></div></section></div></footer></body></html>

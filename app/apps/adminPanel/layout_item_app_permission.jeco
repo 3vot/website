@@ -1,0 +1,25 @@
+<% App = require("app/adminPanel/app") %>
+
+<div class="col-sm-6 col-md-4">
+
+  <div class="thumbnail  app-permission-item" data-app-permission="<%= @id %>">
+    <h3><%= @name.split("_").join(" ") %></h3>
+    <h5><%= @device %></h5>
+
+  
+   <ul class="list-group apps-list  ">
+      <% for path in @appPaths: %>
+        <li class="list-group-item">
+          <span  class="">
+            <%= App.findByAttribute( "path", path )?.name %>
+          </span>
+
+          <span data-app-permission="<%= @id %>" data-app-path="<%= path %>" class="badge badge-danger btn-remove-app-from-permission">X</span>
+
+        </li>
+      <% end %>
+    </ul>
+    
+  </div>
+  
+</div>
