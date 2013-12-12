@@ -3956,6 +3956,10 @@ body {
 .page .headline h2 {
   text-align: center;
 }
+.page .headline h1 strong,
+.page .headline h2 strong {
+  text-shadow: 0px 0px 1px;
+}
 .page .headline p {
   text-align: center;
   margin-top: 15px;
@@ -4008,9 +4012,13 @@ body {
   margin: 10px 0px;
 }
 .page .feature {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  min-height: 240px;
+  margin: 100px 0;
+}
+.page .feature:first-child {
+  margin: 50px 0 0;
+}
+.page .feature:last-child {
+  margin: 100px 0 0;
 }
 .page .feature h3 {
   color: #636466;
@@ -4020,7 +4028,7 @@ body {
   margin-bottom: 30px;
 }
 .page .feature p {
-  margin: 0 auto 10px;
+  margin: 10px auto;
   color: #636466;
   font-size: 20px;
   font-family: 'Roboto', "Times New Roman", Times, serif;
@@ -4202,7 +4210,7 @@ body {
     margin-top: 0px;
   }
   .page .headline h2 {
-    margin-top: 20px;
+    margin: 20px auto;
     width: 80%;
     font-weight: 300;
   }
