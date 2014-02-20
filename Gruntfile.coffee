@@ -43,25 +43,7 @@ module.exports = (grunt) ->
         files:
           [ {expand: true, src: ['./images/*.*'], dest: "./public"} ]
 
-    less:
-      development:
-        files:
-          "./public/r2.css" : "./css/index.less"
-
     threevot_compiler: {
-      apps:{
-        parts: "./config/apps.json",
-        lessVariables: "./css/base/variables.less",
-        organizationId: org.id,
-        destination: "./public"
-      }
-      
-      components:{
-        parts: "./config/components.json",
-        lessVariables: "./css/base/variables.less",
-        organizationId: org.id,
-        destination: "./public"
-      }
     },
 
     mochaTest: 
@@ -87,7 +69,6 @@ module.exports = (grunt) ->
           testScripts: ["./node_modules/chai/chai.js", "./node_modules/mocha/mocha.js","./node_modules/sinon/pkg/sinon.js" ]
           testStyles: ["./node_modules/mocha/mocha.css"]
           init: "chai.should();"
-          lessVariables: "./css/base/variables.less"
           destination: "./test/unit"
           template: "./test/unit/template.eco"
 
@@ -96,7 +77,6 @@ module.exports = (grunt) ->
           testScripts: ["./node_modules/chai/chai.js", "./node_modules/mocha/mocha.js","./node_modules/sinon/pkg/sinon.js" ]
           testStyles: ["./node_modules/mocha/mocha.css"]
           init: "chai.should();"
-          lessVariables: "./css/base/variables.less"
           destination: "./test/unit"
           template: "./test/unit/template.eco"
         src: ['**/test.json'],
@@ -105,19 +85,10 @@ module.exports = (grunt) ->
         filter: Helper.onlyNew(['copy', 'newTest'])
 
     watch:
-      css:
-        files: ["./css/**/*.less"]
-        tasks: ["less"]
-        livereload: true
 
       apps:
         files: ["./app/**/*.coffee", "./app/**/*.eco", "./app/**/*.jeco", "./app/**/*.less"]
         tasks: ["clean:r2", "threevot_compiler"]
-        livereload: true
-
-      views:
-        files: ["./views/*.jade","./views/**/*.jade"]
-        tasks: ["jade"]
         livereload: true
         
       r2apps:
@@ -129,49 +100,6 @@ module.exports = (grunt) ->
         files: ["./images/*.*"]
         tasks: ["copy:images"]
         livereload: true
-
-    jade:
-      production:
-        files:
-          "./public/pricing.html": ["./views/pricing.jade"]
-          "./public/index.html": ["./views/index.jade"]
-          "./public/login.html": ["./views/login.jade"]
-          "./public/home.html": ["./views/home.jade"]
-          "./public/features.html": ["./views/features.jade"]
-          "./public/gettingStarted.html": ["./views/gettingStarted.jade"]
-          "./public/talkToUs.html": ["./views/talkToUs.jade"]
-          "./public/talkToUs-thanks.html": ["./views/talkToUs-thanks.jade"]
-          "./public/connect.html": ["./views/connect.jade"]
-          "./public/connect-thanks.html": ["./views/connect-thanks.jade"]          
-          
-          
-        options: 
-          data: 
-            path: ""
-            apiServer: apiServer
-            marketingServer: "http://peaceful-anchorage-9756.herokuapp.com"
-            app_url: "http://r2.3vot.com"
-
-      dev:
-        files:
-          "./public/pricing.html": ["./views/pricing.jade"]
-          "./public/home.html": ["./views/home.jade"]
-          "./public/login.html": ["./views/login.jade"]
-          "./public/index.html": ["./views/index.jade"]
-          "./public/features.html": ["./views/features.jade"]
-          "./public/gettingStarted.html": ["./views/gettingStarted.jade"]
-          "./public/talkToUs.html": ["./views/talkToUs.jade"]
-          "./public/talkToUs-thanks.html": ["./views/talkToUs-thanks.jade"]
-          "./public/connect.html": ["./views/connect.jade"]
-          "./public/connect-thanks.html": ["./views/connect-thanks.jade"]
-
-
-        options:
-          data:
-            path: ""
-            apiServer: apiServer
-            marketingServer: "http://localhost:3001"
-            app_url: "http://localhost:7770"
 
       test: 
         files:
@@ -247,4 +175,4 @@ module.exports = (grunt) ->
 
   grunt.registerTask('build', ["jade:production", "copy" ,"s3"]);   
 
-  grunt.registerTask('server', ["copy:images" , "clean:r2", "threevot_compiler", "less", "jade:dev" ,'express', 'watch']);
+  grunt.registerTask('server', ["copy:images" , "clean:r2",'express', 'watch']);
