@@ -1,7 +1,0 @@
-{
-  "name": "modelFramework",
-  "pathsToCompile": ["./app/libraries/modalFramework"],
-  "dependenciesToCompile": ["jqueryify","rspine"],
-  "filesToInclude": [],
-  "specs": "test_spec.coffee"
-}
