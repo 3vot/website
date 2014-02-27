@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3VOT Talk with our Founders - Front End as a Service</title>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+	<link rel="stylesheet" href="style.css">
+	<script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	
+</head>
+<body class="container home">
+
+	<div class="row">
+		<nav class="navbar navbar-fixed-top col-xs-12" style="z-index:1; padding: 0" role="navigation">
+    	  <ul class="nav navbar-nav bg-warning" style="margin:0">
+    	    <li class="dropdown">
+    		    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding: 10px 15px;">
+    		    	<img class="nav-logo" src="./images/menu-logo-icon.png" alt="">
+    		    </a>
+    	      <ul class="dropdown-menu">
+    	      	<li><a href="index.html">Home</a></li>
+    	        <li><a href="features.html">Features</a></li>
+    	        <li><a href="gettingstarted.html">Getting Started</a></li>
+    	        <li><a href="talkwithfounders.html">Talk with a Founder</a></li>
+    	      </ul>
+    	    </li>
+    	  </ul>
+		</nav>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<header class="internal-header">
+				<br><br><br>	
+				<h1 class="text-center text-invert">Talk with our Founders</h1>
+			</header>
+		</div>
+	</div>
+
+	
+
+		<section class="page-main-section">
+
+		<div class="row">
+			<section class="col-xs-10 col-xs-offset-1">
+				<br>
+				<h2 class="text-center">We are easy to talk to...</h1>
+				<h3 class="text-center">Just type your name  and number, we'll get back to you</h3>
+				<br>
+			</section>
+		</div>
+
+		
+
+		<form role="form" action="http://peaceful-anchorage-9756.herokuapp.com/register/talk" method="POST" class="form-horizontal form-talk-by-phone">
+			<div class="row">
+				<div class="input-group col-md-4 col-md-offset-4">
+					<span class="input-group-addon" style="border:none;width:120px; background:none"><label for="inputEmail3">Name</label></span>
+					<input type="text" required="" name="CustomerName " style="border:none;box-shadow:inset 0 2px #ccc; border-radius:5px" class="form-control input-lg" placeholder="Jenny">
+				</div>	
+			</div>
+			<br>
+			<div class="row">
+				<div class="input-group col-md-4 col-md-offset-4">
+					<span class="input-group-addon" style="border:none;width:120px; background:none"><label for="inputPassword3">Mobile</label></span>
+					<input type="phone" required="" name="CustomerPhone" style="border:none;box-shadow:inset 0 2px #ccc; border-radius:5px" class="form-control  input-lg" placeholder="+1 800 867 5309">
+				</div>
+			</div>
+
+			<input type="hidden" name="Action" value="Talk">
+			<input type="hidden" name="to" value="8085460736">
+			<input type="hidden" name="from" value="8083540011">
+			<input type="hidden" name="redirectTo" value="/talkToUs-thanks.html">
+
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 text-center">
+					<br>
+					<span class="help-block">Include country code. EJ USA: <strong>+1</strong> 546 123 3344</span>
+					<br>
+					<button type="submit" class="btn btn-lg btn-default" style="border:none">Call us back</button>
+					<br><br>
+				</div>
+			</div>
+		</form>
+
+		<h2 class="text-center">or you can also....</h2>
+		<br>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+				<h3><a href="" class="icon-circle text-center" style="margin-left:-10px;"><span class="glyphicon glyphicon-phone" style="color:#fff;top:5px; "></span></a>&nbsp;&nbsp;Call Us</h3>
+				<div style="padding-left:48px">Phone 	<strong>1-800-363-8078</strong></div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+				<h3><a href="" class="icon-circle text-center" style="margin-left:-10px;"><span class="glyphicon glyphicon-envelope" style="color:#fff;top:5px; "></span></a>&nbsp;&nbsp;Mail Us</h3>
+				<div style="padding-left:48px">Roberto 	<strong><a style="color:#1cb5ea" href="mailto:one@3vot.com?Subject=Hello%20Roberto">one@3vot.com</a></strong></div>
+				<div style="padding-left:48px">Arnoldo	<strong><a style="color:#1cb5ea"href="mailto:a3@3vot.com?Subject=Hello%20Arnoldo">a3@3vot.com</a></strong></div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+				<h3><a href="" class="icon-circle text-center" style="margin-left:-10px;"><span><svg style="width:25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.004 44.001"><path fill="#FFFFFF" d="M43.225 22.231c0-11.426-9.398-20.69-20.988-20.69c-1.223 0-2.424 0.104-3.59 0.3 C16.771 0.7 14.6 0 12.2 0C5.449 0 0 5.4 0 12c0 2.2 0.6 4.3 1.7 6.07c-0.279 1.344-0.424 2.735-0.424 4.2 c0 11.4 9.4 20.7 21 20.688c1.313 0 2.596-0.119 3.842-0.344c1.713 0.9 3.7 1.4 5.8 1.4 c6.723 0 12.174-5.373 12.174-12c0-1.916-0.457-3.725-1.268-5.33C43.055 25.2 43.2 23.8 43.2 22.231L43.225 22.231z M28.43 34.901c-1.799 0.732-3.955 1.107-6.408 1.107c-2.947 0-5.414-0.512-7.342-1.516c-1.379-0.73-2.514-1.721-3.377-2.945 c-0.871-1.23-1.313-2.459-1.313-3.637c0-0.74 0.287-1.383 0.854-1.904c0.564-0.518 1.283-0.783 2.143-0.783 c0.703 0 1.3 0.2 1.8 0.619c0.473 0.4 0.9 1 1.2 1.727c0.361 0.8 0.8 1.5 1.2 2 c0.402 0.5 1 1 1.7 1.311c0.742 0.3 1.7 0.5 3 0.52c1.695 0 3.086-0.355 4.131-1.059 c1.021-0.684 1.518-1.506 1.518-2.512c0-0.795-0.26-1.424-0.793-1.914c-0.557-0.512-1.295-0.91-2.189-1.186 c-0.932-0.285-2.195-0.594-3.76-0.916c-2.131-0.449-3.938-0.981-5.375-1.581c-1.471-0.615-2.656-1.466-3.521-2.53 c-0.883-1.087-1.328-2.443-1.328-4.041c0-1.524 0.469-2.894 1.393-4.078c0.918-1.175 2.256-2.088 3.982-2.714 c1.699-0.618 3.725-0.935 6.014-0.935c1.834 0 3.4 0.2 4.8 0.617c1.354 0.4 2.5 1 3.4 1.7 c0.902 0.7 1.6 1.4 2 2.203c0.424 0.8 0.6 1.6 0.6 2.297c0 0.723-0.283 1.378-0.84 1.9 c-0.563 0.573-1.271 0.865-2.107 0.865c-0.76 0-1.355-0.182-1.768-0.543c-0.385-0.33-0.781-0.854-1.223-1.599 c-0.512-0.955-1.133-1.707-1.84-2.236c-0.689-0.519-1.842-0.78-3.426-0.78c-1.469 0-2.664 0.29-3.551 0.9 c-0.855 0.55-1.273 1.186-1.273 1.931c0 0.5 0.1 0.8 0.4 1.172c0.291 0.4 0.7 0.7 1.2 0.9 c0.539 0.3 1.1 0.5 1.7 0.632c0.57 0.2 1.5 0.4 2.8 0.683c1.66 0.3 3.2 0.7 4.5 1.2 c1.363 0.4 2.5 1 3.5 1.572c0.982 0.6 1.8 1.4 2.3 2.398c0.555 1 0.8 2.2 0.8 3.5 c0 1.66-0.48 3.17-1.436 4.5C31.646 33.1 30.2 34.2 28.4 34.901L28.43 34.901z"/></svg>
+</span></a>&nbsp;&nbsp;Skype</h3>
+				<div style="padding-left:48px">Contact	<strong>roberto.rodriguez.artavia</strong> or <strong>arnoldomora79</strong></div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+				<h3><a href="https://www.facebook.com/3VOTCORP" target="_blank" class="icon-circle text-center" style="margin-left:-10px;"><span><svg style="width:12px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.012 43.995"><path fill="#FFFFFF" d="M20.012 13.994h-6.066v-3.315c0-1.714 1.613-2.74 2.396-2.74c0.781 0 3.6 0 3.6 0V0.026L13.277 0 C5.924 0 4 5.6 4 9.221v4.774H0v8.018h4.002c0 10 0 22 0 21.982h9.943c0 0 0-12.131 0-21.982h4.951L20.012 14 L20.012 13.994z"/>
+</svg>
+</span></a>&nbsp;&nbsp;Facebook</h3>
+				<div style="padding-left:48px"><strong><a href="https://www.facebook.com/3VOTCORP" target="_blank" style="color:#1cb5ea">facebook.com/3votcorp</a></strong></div>
+			</div>
+		</div>
+
+		<br>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+				<h3><a href="https://twitter.com/3VOT" target="_blank" class="icon-circle text-center" style="margin-left:-10px;"><span><svg style="width:25px"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.004 36"><g id="Layer_1"><path fill="#FFFFFF" d="M29.932 0.002c3.496-0.062 5.4 1.2 7.1 2.855c1.51-0.13 3.469-0.98 4.625-1.57 c0.373-0.208 0.748-0.414 1.121-0.62c-0.658 1.796-1.553 3.204-2.928 4.272c-0.305 0.237-0.609 0.556-0.992 0.7 c0 0 0 0 0 0.022c1.959-0.02 3.576-0.911 5.109-1.395c0 0 0 0 0 0.023c-0.805 1.291-1.896 2.601-3.061 3.5 C40.471 8.2 40 8.6 39.5 8.965c0.025 2.091-0.029 4.086-0.418 5.844c-2.254 10.214-8.229 17.148-17.682 20.1 c-3.396 1.066-8.884 1.506-12.774 0.53c-1.931-0.481-3.673-1.026-5.308-1.748c-0.908-0.399-1.75-0.832-2.554-1.327 c-0.265-0.163-0.528-0.326-0.794-0.486c0.879 0 1.9 0.3 2.9 0.109c0.888-0.145 1.759-0.107 2.576-0.288 c2.041-0.45 3.854-1.048 5.417-1.97c0.758-0.445 1.906-0.971 2.444-1.615c-1.015 0.02-1.933-0.219-2.687-0.486 c-2.92-1.041-4.621-2.951-5.726-5.82c0.885 0.1 3.4 0.3 4.03-0.178c-1.115-0.063-2.187-0.713-2.951-1.195 c-2.348-1.482-4.264-3.966-4.25-7.79c0.309 0.1 0.6 0.3 0.9 0.443c0.589 0.2 1.2 0.4 1.9 0.5 c0.297 0.1 0.9 0.2 1.2 0.112c-0.015 0-0.028 0-0.043 0c-0.456-0.533-1.194-0.89-1.651-1.462 c-1.508-1.888-2.92-4.794-2.027-8.255c0.227-0.877 0.587-1.652 0.97-2.368c0.017 0 0 0 0 0 C3.262 2.1 3.7 2.3 3.9 2.638c0.771 1 1.7 1.8 2.7 2.589c3.295 2.6 6.3 4.2 11 5.4 c1.209 0.3 2.6 0.5 4.1 0.532c-0.406-1.192-0.275-3.119 0.043-4.272c0.805-2.898 2.551-4.99 5.109-6.109 c0.611-0.268 1.291-0.463 2.004-0.62C29.195 0.1 29.6 0 29.9 0.002L29.932 0.002z"/></g></svg></span></a>&nbsp;&nbsp;Twitter</h3>
+				<div style="padding-left:48px"><strong><a href="https://twitter.com/3VOT" target="_blank" style="color:#1cb5ea" >twitter.com/3vot</a></strong></div>
+			</div>
+		</div>
+
+	</section>	
+
+	<br><br>
+	<div class="row ">
+		<div class="col-md-12 text-center bg-warning">
+			<br>
+			<h3 class="text-invert">Ask for your beta account now!</h3>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<div class="input-group">
+				    	<input type="text" class="form-control input-lg" placeholder="email@example.com">
+				    	<span class="input-group-btn">
+				    		<button class="btn btn-default btn-lg text-warning" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+				    	</span>
+					</div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+			<br><br>
+		</div>
+
+	</div>
+
+
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
