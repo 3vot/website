@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>3VOT Front End as a Service</title>
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
 	<link rel="stylesheet" href="style.css">
-	<script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	
 </head>
 <body class="container home">
 
@@ -42,8 +41,8 @@
 	</div>
 
 	<div class="row">
-		<div class="videoWrapper col-md-12">
-			<iframe width="560" height="315" src="//www.youtube.com/embed/QROYpM1HSjE?rel=0&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<div class="videoWrapper">
+			<iframe width="560" height="315" src="//www.youtube.com/embed/7LAiGX6_4-s?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
 		</div>
 	</div>
 
@@ -56,15 +55,20 @@
 				<h3 class="text-invert">Ask for your beta account now!</h3>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="input-group">
-					    	<input type="text" class="form-control input-lg" placeholder="email@example.com">
+						<div class="input-group" id="contactArea">
+					    	<input type="text" id="email" class="form-control input-lg" placeholder="email@example.com">
 					    	<span class="input-group-btn">
-					    		<button class="btn btn-default btn-lg text-warning" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+					    		<button class="btn btn-default btn-lg text-warning" type="button" id="newEmail"><span class="glyphicon glyphicon-envelope"></span></button>
 					    	</span>
 						</div><!-- /input-group -->
 					</div><!-- /.col-lg-6 -->
 				</div><!-- /.row -->
 				<br>
+			</div>
+
+			<!-- Hide Element -->
+			<div style="display: none" class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center bg-warning beta-panel-home">
+				<h3 style="line-height: 3em" class="text-invert">Thanks! We Will Contact You Soon !</h3>
 			</div>
 		</div>
 	
@@ -107,9 +111,9 @@
 	<br>
 	<br>
 	<br>
-
-	
+	<script src="http://www.parsecdn.com/js/parse-1.2.17.min.js"></script>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
