@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>3VOT Getting Started - Front End as a Service</title>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body class="container home">
+
+	<div class="row">
+
+		<nav class="navbar navbar-inverse navbar-fixed-top col-md-12" role="navigation">
+
+			<a class="navbar-brand" href="index.html"><img class="nav-logo" src="images/3vot-logo.png" alt=""></a>
+			<!-- <ul class="nav navbar-nav">
+				<li class="">
+					<a href="#">Marketplace</a>
+				</li>
+			</ul> -->
+			<ul class="nav navbar-nav navbar-right menu-button">
+				<li class="dropdown">
+    		    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    		    	<span class="menu-text">Menu&nbsp;&nbsp;</span>
+    		    	 <span class="caret"></span>&nbsp;
+    		    	 <span class="glyphicon glyphicon-th" style="font-size: 20px;top: 4px;line-height: 11px;"></span>  	
+    		    </a>
+    	      <ul class="dropdown-menu">
+    	      	<li><a href="index.html">Home</a></li>
+    	        <li><a href="features.html">Features</a></li>
+    	        <li><a href="gettingstarted.html">Getting Started</a></li>
+    	        <li><a href="talkwithfounders.html">Talk with a Founder</a></li>
+    	      </ul>
+    	    </li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<header class="internal-header">
+				<br><br><br>		
+				<h1 class="text-center text-invert">Getting Started</h1>
+			</header>
+		</div>
+	</div>
+
+	
+
+	<section class="page-main-section">
+
+		<div class="row">
+			<section class="page-steps-section">
+				<br>
+				<article class="col-md-10 col-md-offset-1 getting-started-article"><h4>
+<a name="3vot-cli-intro" class="anchor" href="#3vot-cli-intro"><span class="octicon octicon-link"></span></a>
+</h4>
+
+<h2>
+<a name="getting-started---index" class="anchor" href="#getting-started---index"><span class="octicon octicon-link"></span></a>Getting Started - Index</h2>
+
+<ul>
+<li><a href="#install">1- Install 3VOT CLI</a></li>
+<li>
+<a href="#profile">2- Create a 3VOT profile</a> </li>
+<li><a href="#setup">3- SetUp your profile folder</a></li>
+<li>
+<a href="#download">4- Clone an App</a> </li>
+<li>
+<a href="#run">5- Running the Tutorial App</a> </li>
+<li><a href="#modify">6- Modifying the App</a></li>
+<li><a href="#upload">7- Uploading the App</a></li>
+<li><a href="#publish">8- Publishing the App</a></li>
+<li><a href="#create">9- Create a new App</a></li>
+<li><a href="#run2">10- Run, Upload and Publish again</a></li>
+<li><a href="#createStore">11- Creating a new Store</a></li>
+<li><a href="#list">12- Listing Stores</a></li>
+<li><a href="#add">13- Adding Apps to a Store</a></li>
+<li><a href="#template">14- Modify your profile template</a></li>
+<li><a href="#remove">15- Removing an app from a store</a></li>
+<li><a href="#delete">16- Deleting a store</a></li>
+</ul><h2 class="page-step">
+<a name="-step-1---install-3vot-cli" class="anchor" href="#-step-1---install-3vot-cli"><span class="octicon octicon-link"></span></a><a name="install"></a> Step 1 - Install 3vot-cli</h2>
+
+<p>Open the console (cmd) and install the 3vot-cli ( the tool to build, download and deploy apps )</p>
+
+<pre><code>npm install 3vot-cli -g
+</code></pre>
+
+<h2 class="page-step">
+<a name="-step-2---create-a-3vot-profile" class="anchor" href="#-step-2---create-a-3vot-profile"><span class="octicon octicon-link"></span></a><a name="profile"></a> Step 2 - Create a 3VOT profile</h2>
+
+<p>Create you organization profile in 3vot:</p>
+
+<pre><code>3vot profile:create
+</code></pre>
+
+<p>The console will ask for the full name of your organization's profile:</p>
+
+<pre><code>prompt: Name: ( The Official Name of your profile):  myprofilefullname
+</code></pre>
+
+<p>Then it will ask for the username of your profile, that's the one the will appear in your 3vot url (3vot.com/myusername):</p>
+
+<pre><code>prompt: username: ( The username, that appears in the url ): myusername
+</code></pre>
+
+<p>This will create your profile in the platform, please take note of your developer key and keep it safe. </p>
+
+<h2 class="page-step">
+<a name="-step-3---setup-your-profile-folder" class="anchor" href="#-step-3---setup-your-profile-folder"><span class="octicon octicon-link"></span></a><a name="setup"></a> Step 3 - SetUp your profile folder</h2>
+
+<p>On your console, choose a folder to install 3vot and type:</p>
+
+<pre><code>3vot setup 
+</code></pre>
+
+<p>The console will ask for your Developer Key. </p>
+
+<p>This step will create, in your computer, the folder structure of your 3VOT profile and download all required dependencies from NPM. </p>
+
+<h2 class="page-step">
+<a name="-step-4---clone-an-app" class="anchor" href="#-step-4---clone-an-app"><span class="octicon octicon-link"></span></a><a name="download"></a> Step 4 - Clone an App</h2>
+
+<p><code>3vot setup</code> generates a project folder for your profile. 
+Go inside the Test folder</p>
+
+<pre><code> cd 3vot_myusername
+</code></pre>
+
+<p>Now let’s Download a tutorial app, courtesy of 3VOT ;)</p>
+
+<pre><code> 3vot app:clone
+</code></pre>
+
+<p>The console will ask for the name of the owner of the app you want to download, in this case select the owner:  '3vot'</p>
+
+<pre><code>prompt: Profile: ( The profile name of the owner of the app ): 3vot
+</code></pre>
+
+<p>Then it will ask for the name of the app you want to clone, in this case is 'hello-multi-platform'</p>
+
+<pre><code>Profile: ( The profile name of the owner of the app ):  hello-multi-platform 
+</code></pre>
+
+<p>It will ask for the private code in case you are clonning a private app, this one is a public up, so just hit enter: </p>
+
+<pre><code>prompt: Code: ( The private code in case it's a private app ):                                                          
+</code></pre>
+
+<p>Finally it will ask for the version of the app you want to clone, for the last just hit enter:</p>
+
+<pre><code>prompt: Version: ( The App version, hit enter for latest ):
+</code></pre>
+
+<p>Now you have a tutorial app in your apps folder with it's dependencies from NPM, next step is to Run it.</p>
+
+<h2 class="page-step">
+<a name="-step-5---running-the-tutorial-app" class="anchor" href="#-step-5---running-the-tutorial-app"><span class="octicon octicon-link"></span></a><a name="run"></a> Step 5 - Running the Tutorial App</h2>
+
+<p>Make sure you are on your profile folder '3vot_myusername' and Run the app by typing <code>3vot server</code></p>
+
+<pre><code> 3vot server
+</code></pre>
+
+<h5>
+<a name="if-you-are-using-your-local-console-mac" class="anchor" href="#if-you-are-using-your-local-console-mac"><span class="octicon octicon-link"></span></a>If you are using your local console (Mac):</h5>
+
+<p>This will start a development server, to check the app running just point your browser to : <code>http://localhost:3000/myusername/hello-multi-platform</code></p>
+
+<h5>
+<a name="if-you-are-using-nitrousio" class="anchor" href="#if-you-are-using-nitrousio"><span class="octicon octicon-link"></span></a>If you are using Nitrous.io:</h5>
+
+<p>The console will ask for the preview domain where you can check your app, for this just select the <code>Boxes</code> option located on the top right menu of the Nitrous IDE. </p>
+
+<p>Inside the Nitous-io box you created should be the <code>Preview URI</code> address you need, use that one on the nitrous console without the <code>http://</code> or trailing slashes <code>/</code>. </p>
+
+<pre><code>Example: Domain: ( If you are on nitrous.io type the preview domain with out http:// or trailing slashes / ) :  tutorial3vot-73872-use1.nitrousbox.com
+</code></pre>
+
+<p>This will start a development server, to check the app running using nitrous just point your browser to your <code>previewURI/profile/app</code> .</p>
+
+<pre><code>Example: tutorial3vot-73872-use1.nitrousbox.com/myusername/hello-multi-platform
+</code></pre>
+
+<h2 class="page-step">
+<a name="-step-6---modifying-the-app" class="anchor" href="#-step-6---modifying-the-app"><span class="octicon octicon-link"></span></a><a name="modify"></a> Step 6 - Modifying the App</h2>
+
+<p>Let's make changes to your app, go ahead and change the header in the following file:  <code>3vot_myusername/apps/hello-multi-platform/templates/layouts/desktop.eco</code></p>
+
+<pre><code>...
+&lt;div class="container"&gt;
+
+  &lt;div class=" content-header"&gt;
+    &lt;h2&gt;CHANGE SOMETHING INSIDE THIS HEADER&lt;/h2&gt;
+  &lt;/div&gt;
+...
+</code></pre>
+
+<p>Save your changes and refresh your browser to see them.</p>
+
+<h2 class="page-step">
+<a name="-step-7---uploading-the-app" class="anchor" href="#-step-7---uploading-the-app"><span class="octicon octicon-link"></span></a><a name="upload"></a> Step 7 - Uploading the App</h2>
+
+<p>If you have uploaded the app before you need to increment the version in your app's package.json file, located in <code>apps/hello-multi-platform/package.json</code> , this will allow you to check any running version later, if this is your first time uploading an app skip this.</p>
+
+<pre><code>{
+    "name": "hello-multi-platform",
+    "version": "0.0.1",
+    "profile": "myusername",
+    "description": "A simple app with the SpineJS framework that loads JSON from a Google Spreadsheet, it showcases how to build a multiplatform App.",
+    "threevot": {
+        "displayName": "Multiplatform Hello World",
+        "private": false,
+        "privateCode": "",
+        "size": "small",
+        "external": {},
+...
+</code></pre>
+
+<p>Now Upload the app using :</p>
+
+<pre><code>3vot app:upload 
+</code></pre>
+
+<p>The console will ask for the name of the app you want to upload, write the name <code>hello-multi-platform</code> in this case.</p>
+
+<pre><code>App: ( the name of the app you want to upload ): hello-multi-platform
+</code></pre>
+
+<p>This will upload the App to your profile, you'll later be able to publish it to the world.</p>
+
+<p>It will also deploy a demo of your app in <code>http://demo.3vot.com/armova6/hello-multi-platform_0.0.xx</code> just change the last xx for the version of the app you want to check.</p>
+
+<h2 class="page-step">
+<a name="-step-8---publishing-the-app" class="anchor" href="#-step-8---publishing-the-app"><span class="octicon octicon-link"></span></a><a name="publish"></a> Step 8 - Publishing the App</h2>
+
+<p>When you have a demo that you think it's a winner and want to publish it to the world just type:</p>
+
+<pre><code>3vot app:publish 
+</code></pre>
+
+<p>The console will ask for the name of the app you want to publish, in this case let's publish our app <code>hello-multi-platform</code>.</p>
+
+<pre><code>prompt: App: ( The Name of the App you want to publish ):  hello-multi-platform  
+</code></pre>
+
+<p>The console will ask for the version of the app to be published, to publish the last just hit enter:</p>
+
+<pre><code>prompt: Version: ( The Version of the App you want to publish, enter for latest ):
+</code></pre>
+
+<p>You can access your published app in <code>3vot.com/profile/app/index.html</code></p>
+
+<pre><code>http://3vot.com/myusername/hello-multi-platform/index.html
+</code></pre>
+
+<p>And you're done!</p>
+
+<h2 class="page-step">
+<a name="-step-9---create-a-new-app" class="anchor" href="#-step-9---create-a-new-app"><span class="octicon octicon-link"></span></a><a name="create"></a> Step 9 - Create a new App</h2>
+
+<p>On your console, go inside your <code>3vot_myusername</code> profile folder, and create a new app simply by writing:</p>
+
+<pre><code>3vot app:create
+</code></pre>
+
+<p>The console will ask for the app's name so write the name of the app you want to create</p>
+
+<pre><code>App Name ( The name of the app you want to create ):  appname
+</code></pre>
+
+<p>This will create a folder with the name of the app and will make a basic scaffold for your project. </p>
+
+<h2 class="page-step">
+<a name="-step-10---run-upload-and-publish-again" class="anchor" href="#-step-10---run-upload-and-publish-again"><span class="octicon octicon-link"></span></a><a name="run2"></a> Step 10 - Run, Upload and Publish again.</h2>
+
+<p>Run, upload and publish the app as in Steps 4, 6, and 7.</p>
+
+<h2 class="page-step">
+<a name="-step-11---creating-a-new-store" class="anchor" href="#-step-11---creating-a-new-store"><span class="octicon octicon-link"></span></a><a name="createStore"></a> Step 11 - Creating a new Store</h2>
+
+<p>Stores are a great way to manage and order your apps after you publish them.</p>
+
+<p>To create a new store just type in your console </p>
+
+<pre><code>3vot store:create
+</code></pre>
+
+<p>The console will ask for a name for your store, just like so:</p>
+
+<pre><code>Store: ( The name of the Store you want to create ):  mystore
+</code></pre>
+
+<p>Write a name and this will create it instantly.</p>
+
+<h2 class="page-step">
+<a name="-step-12--listing-stores" class="anchor" href="#-step-12--listing-stores"><span class="octicon octicon-link"></span></a><a name="list"></a> Step 12- Listing Stores</h2>
+
+<p>You can see the list of your stores using the command:</p>
+
+<pre><code>3vot store:list
+</code></pre>
+
+<p>This will show, not only the stores you have but also de apps that have been added to each store.</p>
+
+<h2 class="page-step">
+<a name="-step-13--adding-apps-to-a-store" class="anchor" href="#-step-13--adding-apps-to-a-store"><span class="octicon octicon-link"></span></a><a name="add"></a> Step 13- Adding Apps to a Store</h2>
+
+<p>Now that you've created a store you can add your apps to it.</p>
+
+<p>It's really simple, add them by using:</p>
+
+<pre><code>3vot store:add
+</code></pre>
+
+<p>The console will ask for the name of the store you want to add the app to, and the name of the app.</p>
+
+<pre><code>prompt: Stores: ( The name of the Store you want to use ): mystore
+prompt: App: ( The name of the App you want to add to the store ):  hello-multi-platform 
+</code></pre>
+
+<h2 class="page-step">
+<a name="-step-14--modify-your-profile-template" class="anchor" href="#-step-14--modify-your-profile-template"><span class="octicon octicon-link"></span></a><a name="template"></a> Step 14- Modify your profile template</h2>
+
+<p>At the moment you add an app to a store, for the first time, you start having a profile page located at <code>www.3vot.com/myusername</code>. Your profile is using a standard template located in <code>3vot_myusername/store/template.eco</code> in your computer. </p>
+
+<p>You can modify or change your template file and update it using:</p>
+
+<pre><code>3VOT store:publish store/template.eco
+</code></pre>
+
+<h2 class="page-step">
+<a name="-step-15--removing-an-app-from-a-store" class="anchor" href="#-step-15--removing-an-app-from-a-store"><span class="octicon octicon-link"></span></a><a name="remove"></a> Step 15- Removing an App from a Store</h2>
+
+<p>In the same way you add an app to a store you can remove one, using <code>3vot store:remove</code> , this will remove it from the store, but will not delete the app.</p>
+
+<p>The console will ask the name of the store from wich you will remove an app:</p>
+
+<pre><code>prompt: Store: ( The name of the Store you want to use ): mystore
+</code></pre>
+
+<p>Then it will ask for the name of the app to be removed:</p>
+
+<pre><code>prompt: App: ( The name of the App you want to remove from the store ):  hello-multi-platform 
+</code></pre>
+
+<h2 class="page-step">
+<a name="-step-16--deleting-a-store" class="anchor" href="#-step-16--deleting-a-store"><span class="octicon octicon-link"></span></a><a name="delete"></a> Step 16- Deleting a Store</h2>
+
+<p>To delete a store just use the command ...</p>
+
+<pre><code>3vot store:delete
+</code></pre>
+
+<p>and enter the name the store you want to delete</p>
+
+<pre><code>prompt: Stores: ( The name of the Stores you want to delete ): mystore
+</code></pre>
+
+<h4>
+<a name="hope-you-love-your-first-experience-with-3vots-front-end-as-a-service-platform" class="anchor" href="#hope-you-love-your-first-experience-with-3vots-front-end-as-a-service-platform"><span class="octicon octicon-link"></span></a>Hope you love your first experience with 3vot's Front End as a Service Platform!</h4>
+
+<h4>
+<a name="for-support-pair-programming-sessions-or-any-feedback-please-visit-us-at-www3votcom" class="anchor" href="#for-support-pair-programming-sessions-or-any-feedback-please-visit-us-at-www3votcom"><span class="octicon octicon-link"></span></a>For support, pair programming sessions or any feedback, please visit us at <a href="http://3vot.com/">www.3vot.com</a>
+</h4></article>
+
+			</section>
+		</div>
+		<br><br>
+	</section>
+
+	
+
+
+	<div class="row ">
+		<div class="col-md-12 text-center bg-warning yellow-texture">
+			<br>
+			<h3 class="text-invert">Ask for an introductory Hangout!</h3>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<div class="input-group">
+				    	<input type="text" id="email" class="form-control input-lg" placeholder="email@example.com">
+				    	<span class="input-group-btn">
+				    		<button id="newEmail" class="btn btn-default btn-lg text-warning" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+				    	</span>
+					</div><!-- /input-group -->
+				</div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+			<br><br>
+		</div>
+
+	</div>
+
+
+	<script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
