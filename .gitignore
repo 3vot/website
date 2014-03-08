@@ -4,3 +4,5 @@ node_modules
 .ds_store
 .DS_Store
 npm-debug.log
+aws_keys.json
+./aws_keys.json
