@@ -64,33 +64,34 @@
 
 		
 
-		<form role="form" action="http://peaceful-anchorage-9756.herokuapp.com/register/talk" method="POST" class="form-horizontal form-talk-by-phone col-xs-12">
+		<form role="form" action="" method="POST" class="form-horizontal form-talk-by-phone col-xs-12">
 			<div class="row">
 				<div class="input-group col-md-4 col-md-offset-4">
 					<span class="input-group-addon" style="border:none;width:120px; background:none"><label for="inputEmail3">Name</label></span>
-					<input type="text" required="" name="CustomerName " style="border:none;box-shadow:inset 0 2px #ccc; border-radius:5px" class="form-control input-lg" placeholder="Jenny">
+					<input type="text" id="name" required="" name="CustomerName " style="border:none;box-shadow:inset 0 2px #ccc; border-radius:5px" class="form-control input-lg" placeholder="Jenny">
 				</div>	
 			</div>
 			<br>
 			<div class="row">
 				<div class="input-group col-md-4 col-md-offset-4">
 					<span class="input-group-addon" style="border:none;width:120px; background:none"><label for="inputPassword3">Mobile</label></span>
-					<input type="phone" required="" name="CustomerPhone" style="border:none;box-shadow:inset 0 2px #ccc; border-radius:5px" class="form-control  input-lg" placeholder="+1 800 867 5309">
+					<input type="phone" id="mobile" required="" name="CustomerPhone" style="border:none;box-shadow:inset 0 2px #ccc; border-radius:5px" class="form-control  input-lg" placeholder="+1 800 867 5309">
 				</div>
 			</div>
 
 			<input type="hidden" name="Action" value="Talk">
 			<input type="hidden" name="to" value="8085460736">
 			<input type="hidden" name="from" value="8083540011">
-			<input type="hidden" name="redirectTo" value="/talkToUs-thanks.html">
 
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4 text-center">
 					<br>
 					<span class="help-block">Include country code. EJ USA: <strong>+1</strong> 546 123 3344</span>
 					<br>
-					<button type="submit" class="btn btn-lg btn-default" style="border:none">Call us back</button>
-					<br><br>
+					<button type="submit" id="newPhoneContact" class="btn btn-lg btn-default sumitPhone" style="border:none">Call us back</button>
+
+					<!-- HIDE BUTTON -->
+					<button type="submit" style="display: none; background-color: #97ce41; color: #fff" class="btn btn-lg btn-default sumitPhone" style="border:none">Thank you, you'll receive a notification shortly !</button>
 				</div>
 			</div>
 		</form>
@@ -143,9 +144,9 @@
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
 					<div class="input-group">
-				    	<input type="text" class="form-control input-lg" placeholder="email@example.com">
+				    	<input type="text" id="emailFooter" class="form-control input-lg" placeholder="email@example.com">
 				    	<span class="input-group-btn">
-				    		<button class="btn btn-default btn-lg text-warning" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+				    		<button class="btn btn-default btn-lg text-warning" id="newFooterEmail" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
 				    	</span>
 					</div><!-- /input-group -->
 				</div><!-- /.col-lg-6 -->
@@ -156,9 +157,9 @@
 	</div>
 
 
-	<script src="//www.parsecdn.com/js/parse-1.2.17.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.17.min.js"></script>
 	<script src="http://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="script.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
