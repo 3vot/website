@@ -58,10 +58,10 @@ function savePhoneContact() {
 		})
 	} 
 	else {
-		alert("You must complete all fields")
+		$("#name").addClass("error");
+		$("#mobile").addClass("error");
 	}
 }
-
 /* Thanks */
 function thanksPhone() {
 	$("#name").attr('disabled', true);
